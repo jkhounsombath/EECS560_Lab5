@@ -9,12 +9,14 @@ class hashTableQuadratic
 {
 	private:
 		int* quadraticTable;
-		int q_inputSize;
 		int q_tableSize;
 	public:
 		hashTableQuadratic();
-		hashTableQuadratic(int q_inputSize, int q_tableSize);
+		hashTableQuadratic(int q_tableSize);
 		~hashTableQuadratic();
-		
+		int hashFunc(int x, int round);
+		void insert(int x);
+		bool search(int x);
+
 };
 #endif
